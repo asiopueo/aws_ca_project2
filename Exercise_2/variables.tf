@@ -1,6 +1,6 @@
 # TODO: Define the variable for aws_region
 
 variable "region" {
-    description = "Default deployment region"
-    default = "us-east-1"
+  description = "Default deployment region"
+  default     = "eu-central-1"
 }

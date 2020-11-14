@@ -1,21 +1,21 @@
 terraform {
-    required_providers {
-        aws = {
-            source = "hashicorp/aws"
-            version = "~> 3.00"
-        }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.00"
     }
+  }
 }
 
 provider "aws" {
   profile = "default"
-  region = "us-east-1"
+  region  = var.region
 }
 
 resource "aws_lambda_function" "MyFabulousLambdaFunction" {
-  filename = "greet_lambda.py"
+  filename      = "greet_lambda.zip"
   function_name = "greet_lambda"
-  role = aws_iam_role.iam_for_lambda.arn
-  handler = "exports.test"
-  runtime = "python3.6"
+  role          = aws_iam_role.lambda_exec.arn
+  handler       = "greet_lambda.handler"
+  runtime       = "python3.6"
 }
