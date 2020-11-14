@@ -11,7 +11,7 @@ terraform {
 
 provider "aws" {
     profile = "default"
-    region = "us-east-1"
+    region = "eu-central-1"
 }
 
 
@@ -19,7 +19,7 @@ provider "aws" {
 # TODO: provision 4 AWS t2.micro EC2 instances named Udacity T2
 resource "aws_instance" "udacityT2" {
     count = "4"
-    ami = "ami-xyz"
+    ami = "ami-00a205cb8e06c3c4e"
     instance_type = "t2.micro"
 }
 
@@ -28,6 +28,6 @@ resource "aws_instance" "udacityT2" {
 # TODO: provision 2 m4.large EC2 instances named Udacity M4
 resource "aws_instance" "udacityM4" {
     count = "2"
-    ami = "ami-xyz"
+    ami = "ami-00a205cb8e06c3c4e"
     instance_type = "m4.large"
 }
