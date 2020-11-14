@@ -1,11 +1,11 @@
 # TODO: Designate a cloud provider, region, and credentials
 terraform {
-    required_providers {
-        aws = {
-            source = "hashicorp/aws"
-            version = "~> 3.00"
-        }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.00"
     }
+  }
 }
 
 
@@ -13,7 +13,6 @@ provider "aws" {
     profile = "default"
     region = "eu-central-1"
 }
-
 
 
 # TODO: provision 4 AWS t2.micro EC2 instances named Udacity T2
