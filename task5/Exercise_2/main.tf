@@ -12,7 +12,7 @@ provider "aws" {
   region  = var.region
 }
 
-resource "aws_lambda_function" "MyFabulousLambdaFunction" {
+resource "aws_lambda_function" "my_lambda_fct" {
   filename      = "greet_lambda.zip"
   function_name = "greet_lambda"
   role          = aws_iam_role.lambda_exec.arn
