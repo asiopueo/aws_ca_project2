@@ -5,10 +5,11 @@ Reduced_Cost_Estimate,US East (N. Virginia),Elastic IP,Amazon Elastic IP,0,481.8
 Reduced_Cost_Estimate,US East (N. Virginia),Load Balancer,Elastic Load Balancing,0,441.65000000000003,5299.80,USD,Number of Application Load Balancers (2)
 Reduced_Cost_Estimate,US East (N. Virginia),VPC,Amazon Virtual Private Cloud (VPC),0,65.88,790.56,USD,Number of NAT Gateways (2)
 Reduced_Cost_Estimate,US East (N. Virginia),DNS Service,Amazon Route 53,0,464.75,5577.00,USD,"Hosted Zones (1), Number of Elastic Network Interfaces (5)"
-Reduced_Cost_Estimate,US East (N. Virginia),SQL DB,Amazon RDS for MySQL,0,1334.752,16017.02,USD,"Quantity (2), Pricing strategy (Standard Reserved Instances 1 Year No UpFront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (100 GB), Additional backup storage (100 GB)"
+Reduced_Cost_Estimate,US East (N. Virginia),SQL DB,Amazon RDS for MySQL,0,375.386,4504.63,USD,"Quantity (2), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (db.m5.large), Additional backup storage (100 GB)"
 Reduced_Cost_Estimate,US East (N. Virginia),EC2 Compute,Amazon EC2,0,1628.88,19546.56,USD,"Operating system (Linux), Quantity (16), Pricing strategy (EC2 Instance Savings Plans 1 Year No UpFront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (a1.2xlarge)"
 
-MODIFICATIONS: Halved EC2 performance of application servers; conventional storage of EC2 instances, which might reduce user experience. However, I didn't want any shortcomings on the DB-side which I regard as mission-critical.
+MODIFICATIONS: Halved EC2 performance of application servers; conventional storage of EC2 instances, which might reduce user experience. Reduced on the DB-side to db.m5.large instances.
+RATIONALE: I am optimistically assuming that the lower budget is due to more careful planning of our application, i.e. we are projecting less traffic in the initial phase. Hence, lesser performant EC2 instances and DB-servers will still handle the traffic.
 
 Acknowledgement
 "* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."

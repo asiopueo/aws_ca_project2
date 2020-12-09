@@ -5,10 +5,11 @@ Increased_Cost_Estimate,US East (N. Virginia),Elastic IP,Amazon Elastic IP,0,481
 Increased_Cost_Estimate,US East (N. Virginia),Load Balancer,Elastic Load Balancing,0,441.65000000000003,5299.80,USD,Number of Application Load Balancers (2)
 Increased_Cost_Estimate,US East (N. Virginia),VPC,Amazon Virtual Private Cloud (VPC),0,65.88,790.56,USD,Number of NAT Gateways (2)
 Increased_Cost_Estimate,US East (N. Virginia),DNS Service,Amazon Route 53,0,464.75,5577.00,USD,"Hosted Zones (1), Number of Elastic Network Interfaces (5)"
-Increased_Cost_Estimate,US East (N. Virginia),SQL DB,Amazon RDS for MySQL,0,10287.18,123446.16,USD,"Quantity (2), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (db.m5.16xlarge), Additional backup storage (100 GB)"
-Increased_Cost_Estimate,US East (N. Virginia),EC2 Compute,Amazon EC2,0,6403.52,76842.24,USD,"Operating system (Linux), Quantity (32), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (Provisioned IOPS SSD (io1)), Storage amount (100 GB), Instance type (a1.4xlarge)"
+Increased_Cost_Estimate,US East (N. Virginia),SQL DB,Amazon RDS for MySQL,0,10441.18,125294.16,USD,"Quantity (4), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (200 GB), Instance type (db.m5.8xlarge), Additional backup storage (100 GB)"
+Increased_Cost_Estimate,US East (N. Virginia),EC2 Compute,Amazon EC2,0,6403.52,76842.24,USD,"Operating system (Linux), Quantity (32), Pricing strategy (EC2 Instance Savings Plans 1 Year No UpFront), Storage for each EC2 instance (Provisioned IOPS SSD (io1)), Storage amount (100 GB), Instance type (a1.4xlarge)"
 
 MODIFICATIONS: Duplication of number of EC2 instances, upgrade of each SSD storage to provisioned IOPS SSD; significant upgrade of RDS instance type to meet heavy demand
+RATIONALE: Higher budgets usually comes along with more optimistic user projections. Therefore, are preparing ourselves with a larger number of front-end instances who can handle the traffic, and more powerful DB-instances. Also note the increased quality (provisioned IOPS SSD) and quantity (200 GB) of the databases' storage.
 
 Acknowledgement
 "* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."

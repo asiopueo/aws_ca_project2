@@ -2,7 +2,7 @@ Initial_Cost_Estimate:
 https://calculator.aws/#/estimate?id=df23d62efb2d38229e5c4aaa651596200584d0c5
 
 Reduced_Cost_estimate:
-https://calculator.aws/#/estimate?id=70251d21e7036c0bc9c316675ad746ac073468cc
+https://calculator.aws/#/estimate?id=56774338ae5a55cf9ae31d33400fe71053d7372f
 
 Increased_Cost_Estimate:
-https://calculator.aws/#/estimate?id=f07916181724c826e21f4b05f17412056c49461e
+https://calculator.aws/#/estimate?id=bb511621f0e774f439984e626e6bf6a471895e1c
